@@ -6,11 +6,15 @@
 //     cursor-pointer">Rate Me</button>
 // }
 
-export function UserName (props) {
-    return( 
-    <>
-        <p>{props.name}</p>
-        {props.age}
-    </>
-    )
+// export function UserName (props) {
+//     return( 
+//     <>
+//         <p>{props.name}</p>
+//         {props.age}
+//     </>
+//     )
+// }
+
+export function TakerName (params) {
+    return <p>World</p>
 }

@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
-//import {UserNameGenerator , ButtonGenerator } from './components/textGenerator';
-import { UserName } from './components/textGenerator'
+import './App.css';
+import 
 
 function App() {
   return (
@@ -19,7 +18,8 @@ function App() {
       {/* <h1>hello world <UserNameGenerator /></h1>
       <ButtonGenerator /> */}
 
-        <h1>Hello <UserName name="Zain Ur Rehman" age="17 years" /></h1>
+        {/* <h1>Hello <UserName name="Zain Ur Rehman" age="17 years" /></h1> */}
+        <h1 name="Zain Ur Rehman">Hello <nameTaker /></h1>
 
     </>
   )
