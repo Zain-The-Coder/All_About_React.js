@@ -78,4 +78,35 @@ import './App.css';
 //   )
 // }
 
+// import { useState } from 'react';
+
+// function App () {
+//     let [count , setCount] = useState(0);
+//     return (
+//         <>
+//             <h1 className='text-[50px] text-center'>Welcome At Zain Counter</h1>
+//             <h2 className='text-[30px] text-center'>Currunt Counter Is : {count}</h2> <br />
+//             <div className='flex gap-[10px] justify-center'>
+//                 <button className='border py-[7px] px-[20px] rounded cursor-pointer' onClick={() => {setCount(count + 1)}}>Increment</button>
+//                 <button className='border py-[7px] px-[20px] rounded cursor-pointer' onClick={() => {setCount(count - 1)}}>Decrement</button>
+//                 <button className='border py-[7px] px-[20px] rounded cursor-pointer' onClick={() => {setCount(count = 0)}}>Reset</button>
+//             </div>
+
+//         </>
+//     )
+// }
+
+function App () {
+    return (
+        <>
+        <h1 className='text-center text-[35px] uppercase'>hello Form</h1>
+        <form className='flex flex-col gap-[10px]'>
+            Enter Your Name : <input className='border p-[4px] rounded-2xl w-[30%]' type="text" name='text' />
+            Enter Your Email<input className='border p-[4px] rounded-2xl w-[30%]' type="email" name='email' />
+            Enter Your Password<input className='border p-[4px] rounded-2xl w-[30%]' type="password" name='password' />
+            <input className='cursor-pointer' type="submit" />
+        </form>
+        </>
+    )
+}
 export default App
