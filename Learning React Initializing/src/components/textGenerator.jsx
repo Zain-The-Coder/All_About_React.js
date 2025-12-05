@@ -1,20 +1,11 @@
-// export function UserNameGenerator () {
-//         return <div>hello</div>
-// }
-// export function ButtonGenerator () {
-//     return <button className="text-[20px] bg-amber-600 border text-[#fff] font-bold px-[30px] py-[10px] rounded-[20px]
-//     cursor-pointer">Rate Me</button>
+// export function ChangerName () {
+//     return <p>Zain Ur Rehman</p>
 // }
 
 // export function UserName (props) {
-//     return( 
-//     <>
-//         <p>{props.name}</p>
-//         {props.age}
-//     </>
-//     )
-// }
+//     return <h2>{props.name} And His Age Is {props.age}</h2>
+// } 
 
-export function TakerName (params) {
-    return <p>World</p>
+export function Greeting (reactParameter) {
+    return <h2>Hello {reactParameter.name} Look Very Best !</h2>
 }
