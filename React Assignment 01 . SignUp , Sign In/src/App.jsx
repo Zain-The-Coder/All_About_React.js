@@ -7,7 +7,7 @@ function App () {
   return (
     <>
     <h1 className='text-[40px] text-center uppercase'>hello react</h1>
-    <div className='flex justify-around'>
+    <div className='flex justify-around div'>
     <SignUp />
     <SignIn />
     </div>

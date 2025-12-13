@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 function SignIn() {
-  let userNames = JSON.parse(localStorage.getItem("userNames"));
-  let userEmails = JSON.parse(localStorage.getItem("userEmails"));
-  let userPasswords = JSON.parse(localStorage.getItem("userPasswords"));
+  let userNames = JSON.parse(localStorage.getItem("userNames")) || [];
+  let userEmails = JSON.parse(localStorage.getItem("userEmails")) || [];
+  let userPasswords = JSON.parse(localStorage.getItem("userPasswords")) || [];
 
   const [error, setError] = useState("");
   const [userName, setuserName] = useState("");
