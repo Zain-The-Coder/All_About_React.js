@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 function SignUp() {
     const [error, setError] = useState("");
     const [userName, setUserName] = useState("");
@@ -10,6 +11,9 @@ function SignUp() {
     let userKpasswords = [];
 
     function errorHandler() {
+        let storedEmails = JSON.parse(localStorage.getItem("userEmails")) || [];
+        let storedNames = JSON.parse(localStorage.getItem("userNames")) || [];
+
         if (!userName || !userEmail || !userPassword) {
             setError("Fill The Above All Requirements !");
             return false;
@@ -25,6 +29,14 @@ function SignUp() {
         if (userPassword.length < 6) {
             setError("Password Should Be Strong or 6 Letters !");
             return false;
+        }
+        if(storedNames.includes(userName)) {
+            setError("The User Name Is Already Been Taken !");
+            return ;
+        }
+        if(storedEmails.includes(userEmail)) {
+            setError("Email Adress Is Already In Use !");
+            return false ;
         }
         setError("Login Successfully !");
         return true;

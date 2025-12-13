@@ -1,32 +1,41 @@
 import { useState } from "react";
 
 function SignIn() {
+  let userNames = JSON.parse(localStorage.getItem("userNames"));
+  let userEmails = JSON.parse(localStorage.getItem("userEmails"));
+  let userPasswords = JSON.parse(localStorage.getItem("userPasswords"));
+
   const [error, setError] = useState("");
   const [userName, setuserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
 
-  const errorHandler = () => {
+  const formSubmit = (e) => {
+    e.preventDefault();
+    let matchedUserName = userNames.indexOf(userName);
+
     if (!userName || !userEmail || !userPassword) {
       setError("Please Fill The Above All Fields !");
       return;
     }
-
-    if (userPassword.length < 6) {
-      setError("Password Is Too Short");
-      return;
+    if(!userNames.includes(userName)) {
+      setError("Incorrect User Name !");
+    return
     }
-  };
+    if(userEmails[matchedUserName] !== userEmail) {
+      setError("The Email Adress Is Wrong !") ;
+      return ;
+    }
+    if(userPasswords[matchedUserName] !== userPassword) {
+      setError("Incorrect Password !");
+      return ;
+    }
+    setError("Welcome " + userName);
 
-  const formSubmit = (e) => {
-    e.preventDefault();
-    errorHandler();
-    setError("Login Successfully !");
       setuserName("");
       setUserEmail("");
       setUserPassword("");
-  }
-
+  } 
 
   return (
     <>
