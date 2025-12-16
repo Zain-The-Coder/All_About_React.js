@@ -1,13 +1,21 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css';
+import Parent from './components/parent';
 import { useEffect, useState } from 'react';
+import Child from './Components/Child';
+import GrandChild from './Components/GrandChild';
 
 function App () {
 
   // :Learning : What Is Props Drilling ???
-    
-
+  return (
+    <>
+    <UserContext.Provider message="Message Pass From App.JSX">
+      <Parent />
+    </UserContext.Provider>
+  </>
+  )
 
 
 
@@ -38,4 +46,4 @@ function App () {
   // )
 
 }
-export default App
+export default App;
