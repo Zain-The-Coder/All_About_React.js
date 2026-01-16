@@ -54,16 +54,25 @@ import GrandChild from "./Components/GrandChild";
 import { Link } from "react-router-dom";
 
 
+// function App () {
+//   return (
+//     <>
+//     <header>
+//     <h1 className="border">Hello From App.jsx</h1>
+//     <Link to="/Parent">Go To Parent</Link>
+//     <Child />
+//     <GrandChild />
+//     </header>
+//     </>
+//   )
+// }
+// export default App;
+
 function App () {
   return (
     <>
-    <header>
-    <h1 className="border">Hello From App.jsx</h1>
-    <Link to="/Parent">Go To Parent</Link>
-    <Child />
-    <GrandChild />
-    </header>
+    <h1>Hello App.jsx</h1>
     </>
   )
 }
-export default App;
+export default App ;

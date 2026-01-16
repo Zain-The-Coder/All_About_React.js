@@ -1,6 +1,33 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css';
+import Routing from './components/Routing';
+import { BrowserRouter , Routes , Route } from 'react-router-dom';
+import Hello from "./components/Hello" ;
+import About from './components/About';
+import Contact from './components/Contact';
+
+
+function App () {
+    return (
+    <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Routing />}/>
+          <Route path="/hello" element={<Hello />}/>
+          <Route path="/about" element={<About />}/>
+          <Route path="/contact" element={<Contact />}/>
+        </Routes>
+    </BrowserRouter>
+
+    )
+}
+export default App ;
+
+
+
+
+
+
 
 // function App() {
 //   return (
@@ -96,17 +123,19 @@ import './App.css';
 //     )
 // }
 
-function App () {
-    return (
-        <>
-        <h1 className='text-center text-[35px] uppercase'>hello Form</h1>
-        <form className='flex flex-col gap-[10px]'>
-            Enter Your Name : <input className='border p-[4px] rounded-2xl w-[30%]' type="text" name='text' />
-            Enter Your Email<input className='border p-[4px] rounded-2xl w-[30%]' type="email" name='email' />
-            Enter Your Password<input className='border p-[4px] rounded-2xl w-[30%]' type="password" name='password' />
-            <input className='cursor-pointer' type="submit" />
-        </form>
-        </>
-    )
-}
-export default App
+// function App () {
+//     return (
+//         <>
+//         <h1 className='text-center text-[35px] uppercase'>hello Form</h1>
+//         <form className='flex flex-col gap-[10px]'>
+//             Enter Your Name : <input className='border p-[4px] rounded-2xl w-[30%]' type="text" name='text' />
+//             Enter Your Email<input className='border p-[4px] rounded-2xl w-[30%]' type="email" name='email' />
+//             Enter Your Password<input className='border p-[4px] rounded-2xl w-[30%]' type="password" name='password' />
+//             <input className='cursor-pointer' type="submit" />
+//         </form>
+//         </>
+//     )
+// }
+// export default App
+
+
