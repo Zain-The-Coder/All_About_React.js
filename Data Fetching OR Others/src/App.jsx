@@ -1,3 +1,19 @@
+import Fetch from "./components/Fetch";
+
+function App () {
+    return (
+        <>
+        <Fetch />
+        </>
+    )
+}
+export default App ;
+
+
+
+
+
+
 // import { useEffect, useState } from "react";
 
 // const App = () => {
